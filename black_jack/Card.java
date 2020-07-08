@@ -3,14 +3,32 @@ package black_jack;
 import static java.lang.Integer.parseInt;
 
 public class Card {
+    //Allows for only four choices for suit in Card,
+    //and gives a human readable translation for Unicode face suit strings
+    protected enum Suit {
+        HEART("\u2661"), DIAMOND("\u2662"), SPADE("\u2664"), CLUB("\u2667");
+
+        String ucVal;
+
+        Suit(String ucVal) {
+            this.ucVal = ucVal;
+        }
+
+        public String getUcVal() {
+            return this.ucVal;
+        }
+    }
     private String faceValue;
-    private String suit;
+    private Suit suit;
     private int gameValue;
 
-    public Card(String faceValue, String suit) {
+    public Card(String faceValue, Suit suit) {
         this.faceValue = faceValue;
         this.suit = suit;
 
+        //If an int cannot be parsed from a face value,
+        //the card is a "Face card" and has a game value
+        //of 10 ("J", "Q", "K") or 11 ("A")
         try {
             this.gameValue = parseInt(faceValue);
         } catch(Throwable e) {
@@ -24,7 +42,7 @@ public class Card {
         return faceValue;
     }
 
-    public String getSuit() {
+    public Suit getSuit() {
         return suit;
     }
 
@@ -33,6 +51,8 @@ public class Card {
     }
 
     public void setGameValue(int gameValue) {
+        //We only want Aces to be able to change value
+        //and we only want Aces to be a 1 or 11
         if(!this.faceValue.equals("A")) {
             System.out.println("Only aces can change value");
             return;
