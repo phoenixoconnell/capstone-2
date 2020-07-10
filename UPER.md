@@ -31,6 +31,7 @@
 </h2>
 <ul>
     <li>Completed parts 1 and 2 of UPER</li>
+    <li>Wrote 4 Pillars of OOP essay</li>
     <li>Decided on Blackjack for the game to create</li>
     <li>Looked up Blackjack game rules</li>
     <li>Did walkthrough on GenMyModel</li>
@@ -46,6 +47,12 @@
     <li>Wrote functionality for User class</li>
     <li>Updated wireframe for Player and User classes, removed Hand class from wireframe</li>
     <li>Refactored Deck class to create a Singleton instance</li>
+    <li>Implemented functionality for Dealer class</li>
+    <li>Changed Deck class so that filling and refilling the deck occur automatically</li>
+    <li>Added newRound method to User class</li>
+    <li></li>
+    <li></li>
+    <li></li>
     <li></li>
     <li></li>
     <li></li>

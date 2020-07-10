@@ -20,6 +20,23 @@ public class User extends Player {
         this.winnings = 0;
     }
 
+    //same as newRound below, but with a default minimum bet amount
+    public void newRound() {
+        newRound(50);
+    }
+
+    //clears a user's hand of existing spreads and deals two cards into a new spread
+    //with a bet amount set by the user
+    public void newRound(int bet) {
+        if(this.hand.size() > 0) this.hand.clear();
+
+        Spread newSpread = new Spread(bet);
+        setBank(-bet);
+
+        newSpread.addCard(deck.shuffleDraw());
+        newSpread.addCard(deck.shuffleDraw());
+    }
+
     public String getName() {
         return this.name;
     }
@@ -84,5 +101,9 @@ public class User extends Player {
         }
         hit(spread);
         spread.willStand();
+    }
+
+    public Spread getSpread(int index) {
+        return this.hand.get(index);
     }
 }

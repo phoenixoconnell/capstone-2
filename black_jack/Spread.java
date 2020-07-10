@@ -16,6 +16,13 @@ public class Spread {
         this.stand = false;
     }
 
+    public Spread() {
+        this.spread = new ArrayList<>();
+        this.busted = false;
+        this.bet = 0;
+        this.stand = false;
+    }
+
     public ArrayList<Card> getSpread() {
         return this.spread;
     }
@@ -37,6 +44,7 @@ public class Spread {
                 value = spread.stream().mapToInt(c -> c.getGameValue()).reduce(0, (a, i) -> a + i);
             } else {
                 busted = true;
+                stand = true;
             }
         }
         return value;

@@ -5,11 +5,12 @@ import java.util.ArrayList;
 public class Deck implements Dealable {
     public static Deck singleton = null;
     private ArrayList<Card> deck;
-    private boolean empty;
+//    private boolean empty;
 
     Deck() {
         deck = new ArrayList<>();
-        empty = true;
+        fillDeck();
+//        empty = true;
     }
 
 
@@ -22,7 +23,8 @@ public class Deck implements Dealable {
         int r = (int) (Math.random() * (deck.size()));
         card = this.deck.remove(r);
 
-        if(deck.size() == 0) empty = true;
+//        if(deck.size() == 0) empty = true;
+        if(deck.size() == 0) fillDeck();
         return card;
     }
 
@@ -51,16 +53,17 @@ public class Deck implements Dealable {
             
             deck.add(new Card(val, suit));
         }
-        empty = false;
+//        empty = false;
     }
 
-    public boolean isEmpty() {
-        return empty;
-    }
+//    public boolean isEmpty() {
+//        return empty;
+//    }
 
     public static Deck getInstance() {
         if(singleton == null) {
             singleton = new Deck();
+//            singleton.fillDeck();
         }
 
         return singleton;
