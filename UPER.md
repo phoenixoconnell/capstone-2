@@ -42,10 +42,10 @@
     <li>Added Player abstract class</li>
     <li>Wrote functionality for Spread class, adding additional members and attributes from the original wireframe</li>
     <li>Updated Spread class in wireframe</li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Updated Player abstract class</li>
+    <li>Wrote functionality for User class</li>
+    <li>Updated wireframe for Player and User classes, removed Hand class from wireframe</li>
+    <li>Refactored Deck class to create a Singleton instance</li>
     <li></li>
     <li></li>
     <li></li>
@@ -55,8 +55,8 @@
 </h2>
 <ul>
     <li>Possibility of moving card values out of Cards and implementing more robust logic in Spread to calculate value</li>
-    <li></li>
-    <li></li>
+    <li>Determined that Hand class was not needed</li>
+    <li>Decided to make Deck a Singleton instance for use in the User and Dealer classes to ensure a common pool of cards</li>
     <li></li>
     <li></li>
 </ul>

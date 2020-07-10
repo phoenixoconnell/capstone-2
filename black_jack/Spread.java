@@ -4,18 +4,24 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Spread {
-    ArrayList<Card> spread;
-    boolean busted;
-    int bet;
+    private ArrayList<Card> spread;
+    private boolean busted;
+    private int bet;
+    private boolean stand;
 
     public Spread(int bet) {
         this.spread = new ArrayList<>();
-        busted = false;
+        this.busted = false;
         this.bet = bet;
+        this.stand = false;
+    }
+
+    public ArrayList<Card> getSpread() {
+        return this.spread;
     }
 
     public void addCard(Card card) {
-        spread.add(card);
+        if(!this.stand) spread.add(card);
     }
 
     public int getValue() {
@@ -48,5 +54,17 @@ public class Spread {
 
     public void doubleBet() {
         this.bet *= 2;
+    }
+
+    public int getBet() {
+        return this.bet;
+    }
+
+    public void willStand() {
+        this.stand = true;
+    }
+
+    public boolean isStanding() {
+        return this.stand;
     }
 }

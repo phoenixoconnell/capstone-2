@@ -3,6 +3,7 @@ package black_jack;
 import java.util.ArrayList;
 
 public class Deck implements Dealable {
+    public static Deck singleton = null;
     private ArrayList<Card> deck;
     private boolean empty;
 
@@ -55,6 +56,14 @@ public class Deck implements Dealable {
 
     public boolean isEmpty() {
         return empty;
+    }
+
+    public static Deck getInstance() {
+        if(singleton == null) {
+            singleton = new Deck();
+        }
+
+        return singleton;
     }
 
     //Test for Deck functionality
