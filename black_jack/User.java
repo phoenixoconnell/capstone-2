@@ -106,4 +106,8 @@ public class User extends Player {
     public Spread getSpread(int index) {
         return this.hand.get(index);
     }
+
+    public ArrayList<Spread> getSpread() {
+        return this.hand;
+    }
 }

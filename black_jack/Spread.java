@@ -75,4 +75,37 @@ public class Spread {
     public boolean isStanding() {
         return this.stand;
     }
+
+//    public String[] toString() {
+//        String[] temp = new String[8];
+//
+//        for(int i = 0; i < temp.length; i++) {
+//            temp[i] += "";
+//            if(i == 0 || i == 7) {
+//                for(int j = 0; j < this.spread.size(); j++) {
+//                    temp[i] += j == this.spread.size() - 1 ? "+--------+" : "+--";
+//                }
+//            }
+//            if(i == 1 || i == 6) {
+//                for(int j = 0; j < this.spread.size(); j++) {
+//                    temp[i] += j == this.spread.size() - 1 ? "|      " + this.spread.get(i).getFaceValue() + " |": "|" +
+//                            "  ";
+//                }
+//            }
+//            if(i == 2 || i == 5) {
+//                for(int j = 0; j < this.spread.size(); j++) {
+//                    temp[i] += j == this.spread.size() - 1 ? "|"
+//                }
+//            }
+//        }
+
+    public String toString() {
+        String temp = "";
+        for(int i = 0; i < this.spread.size(); i++) {
+            temp += "[" + this.spread.get(i).getFaceValue() + this.spread.get(i).getSuit() + "] ";
+        }
+
+        return temp;
+    }
+//    }
 }

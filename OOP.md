@@ -27,6 +27,22 @@ Polymorphism in OOP is the ability to redefine methods for derived classes. All 
 As an example of overriding, given a method on the Vehicle class called run() that returns a string "I am running", a child class called Car could have an overridden method that gets the original string from the parent class with a call to super.run() that then adds " smoothly" to the end to return "I am running smoothly" when called.
 
 
+Resources:
+
+https://medium.com/@hamzzza.ahmed95/four-pillars-of-object-oriented-programming-oop-e8d7822aa219
+
+https://www.linkedin.com/pulse/4-pillars-object-oriented-programming-pushkar-kumar/
+
+https://beginnersbook.com/2013/03/oops-in-java-encapsulation-inheritance-polymorphism-abstraction/
+
+https://stackify.com/oop-concept-abstraction/#:~:text=Abstraction%20is%20one%20of%20the,unnecessary%20details%20from%20the%20user.&text=That's%20a%20very%20generic%20concept,limited%20to%20object%2Doriented%20programming.
+
+https://raygun.com/blog/oop-concepts-java/#:~:text=You%20can%20implement%20encapsulation%20in,(fields)%20of%20a%20class.
+
+https://www.tutorialspoint.com/java/java_encapsulation.htm#:~:text=Encapsulation%20in%20Java%20is%20a,together%20as%20a%20single%20unit.&text=Declare%20the%20variables%20of%20a,and%20view%20the%20variables%20values.
+
+https://howtodoinjava.com/oops/understanding-abstraction-in-java/#:~:text=Abstraction%20is%20more%20about%20hiding,variables)%20within%20the%20same%20class.
+
 
 
 
