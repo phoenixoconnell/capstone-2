@@ -35,6 +35,8 @@ public class User extends Player {
 
         newSpread.addCard(deck.shuffleDraw());
         newSpread.addCard(deck.shuffleDraw());
+
+        this.hand.add(newSpread);
     }
 
     public String getName() {
@@ -60,8 +62,14 @@ public class User extends Player {
         this.bank += spread.getBet() * 2;
     }
 
+    public void blackJack(Spread spread) {
+        this.winnings += (int) spread.getBet() * 1.5;
+        this.bank += (int) spread.getBet() + spread.getBet() * 1.5;
+    }
+
     //Subtract pot for single spread from bank and winnings
     public void lose(Spread spread) {
+        System.out.println(spread.getBet());
         this.winnings -= spread.getBet();
         if(this.bank <= 0) {
             this.broke = true;
@@ -70,6 +78,7 @@ public class User extends Player {
 
     public void hit(Spread spread) {
         if(!spread.isStanding()) spread.addCard(deck.shuffleDraw());
+        if(spread.getValue() > 21) spread.didBust();
     }
 
     public void stand(Spread spread) {
@@ -99,6 +108,8 @@ public class User extends Player {
             System.out.println("Not enough money!");
             return;
         }
+        this.bank -= spread.getBet();
+        spread.doubleBet();
         hit(spread);
         spread.willStand();
     }

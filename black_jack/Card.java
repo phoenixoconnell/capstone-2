@@ -32,7 +32,6 @@ public class Card {
         try {
             this.gameValue = parseInt(faceValue);
         } catch(Throwable e) {
-            System.out.println("Face card detected");
             this.gameValue = faceValue.equals("A") ? 11 : 10;
         }
 
@@ -57,7 +56,7 @@ public class Card {
             System.out.println("Only aces can change value");
             return;
         }
-        if(gameValue != 1 || gameValue != 11) {
+        if(gameValue != 1 && gameValue != 11) {
             System.out.println("Aces can only be 1 or 11");
             return;
         }

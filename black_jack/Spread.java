@@ -54,6 +54,10 @@ public class Spread {
         return this.busted;
     }
 
+    public void didBust() {
+        this.busted = true;
+    }
+
     public Spread split() {
         Spread temp = new Spread(this.bet);
         temp.addCard(spread.remove(0));
@@ -61,7 +65,7 @@ public class Spread {
     }
 
     public void doubleBet() {
-        this.bet *= 2;
+        this.bet = this.bet * 2;
     }
 
     public int getBet() {
@@ -76,33 +80,18 @@ public class Spread {
         return this.stand;
     }
 
-//    public String[] toString() {
-//        String[] temp = new String[8];
-//
-//        for(int i = 0; i < temp.length; i++) {
-//            temp[i] += "";
-//            if(i == 0 || i == 7) {
-//                for(int j = 0; j < this.spread.size(); j++) {
-//                    temp[i] += j == this.spread.size() - 1 ? "+--------+" : "+--";
-//                }
-//            }
-//            if(i == 1 || i == 6) {
-//                for(int j = 0; j < this.spread.size(); j++) {
-//                    temp[i] += j == this.spread.size() - 1 ? "|      " + this.spread.get(i).getFaceValue() + " |": "|" +
-//                            "  ";
-//                }
-//            }
-//            if(i == 2 || i == 5) {
-//                for(int j = 0; j < this.spread.size(); j++) {
-//                    temp[i] += j == this.spread.size() - 1 ? "|"
-//                }
-//            }
-//        }
+    //Checks to see if spread is a BlackJack
+    public boolean isBlackJack() {
+        if(this.spread.size() != 2) return false;
+        if(this.spread.get(0).getGameValue() == 11 && this.spread.get(1).getGameValue() == 10) return true;
+        if(this.spread.get(0).getGameValue() == 10 && this.spread.get(1).getGameValue() == 11) return true;
+        return false;
+    }
 
     public String toString() {
         String temp = "";
         for(int i = 0; i < this.spread.size(); i++) {
-            temp += "[" + this.spread.get(i).getFaceValue() + this.spread.get(i).getSuit() + "] ";
+            temp += "[" + this.spread.get(i).getFaceValue() + this.spread.get(i).getSuit().getUcVal() + "] ";
         }
 
         return temp;
