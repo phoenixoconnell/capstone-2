@@ -154,9 +154,13 @@ public class Menu {
                 }
 
                 if(s.isBusted()) {
+                    System.out.println(s.toString());
                     System.out.println("Busted!");
-                    this.user.lose(s);
-                    return;
+                    if(this.user.getSpread().size() == 1) {
+                        this.user.lose(s);
+                        return;
+                    }
+                    break;
                 }
             }
         }
@@ -186,15 +190,13 @@ public class Menu {
             if(s.getValue() >= this.dealer.getSpread().getValue() && !s.isBusted() ) {
                 System.out.println("You win!");
                 user.win(s);
-                return;
             } else {
                 System.out.println("You lose!");
                 user.lose(s);
-                return;
             }
         }
 
-        System.out.println("New round should start");
+//        System.out.println("New round should start");
     }
 
     public void buyBack() {
