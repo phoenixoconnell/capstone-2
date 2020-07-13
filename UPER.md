@@ -58,6 +58,10 @@
     <li>Changed for in loop to for loop in actionMenu method to loop through all user spreads including those added while iterating</li>
     <li>Fixed calculation error for doubling bet (*= operator causing unexpected results)</li>
     <li>Fixed bug where user could bet more than was in their bank</li>
+    <li>Fixed bug of busted not showing when player busts their hand</li>
+    <li>Had helpers test/play the game to look for additional issues</li>
+    <li>Added rules to Game-Instructions.md</li>
+    <li>Created website for rules</li>
     <li>Prepared for class presentation</li>
     <li>Presented project to class</li>
 </ul>
@@ -71,5 +75,5 @@
     <li>Decided to make Deck a Singleton instance for use in the User and Dealer classes to ensure a common pool of cards</li>
     <li>Fixed getting integer input from user to stop program crashes</li>
     <li>Changed for in loop to for loop in actionMenu method to loop through all user spreads including those added while iterating</li>
-    <li>Fixed bug where user could bet more than was in their bank</li>
+    <li>Fixed issue where user could bet more than was in their bank</li>
 </ul>

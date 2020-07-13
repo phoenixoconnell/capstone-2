@@ -156,6 +156,7 @@ public class Menu {
                 if(s.isBusted()) {
                     System.out.println("Busted!");
                     this.user.lose(s);
+                    return;
                 }
             }
         }

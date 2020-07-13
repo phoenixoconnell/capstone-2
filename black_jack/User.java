@@ -69,7 +69,7 @@ public class User extends Player {
 
     //Subtract pot for single spread from bank and winnings
     public void lose(Spread spread) {
-        System.out.println(spread.getBet());
+//        System.out.println(spread.getBet());
         this.winnings -= spread.getBet();
         if(this.bank <= 0) {
             this.broke = true;

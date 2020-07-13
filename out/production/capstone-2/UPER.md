@@ -57,6 +57,7 @@
     <li>Fixed toLowerCase on name entry</li>
     <li>Changed for in loop to for loop in actionMenu method to loop through all user spreads including those added while iterating</li>
     <li>Fixed calculation error for doubling bet (*= operator causing unexpected results)</li>
+    <li>Fixed bug where user could bet more than was in their bank</li>
     <li>Prepared for class presentation</li>
     <li>Presented project to class</li>
 </ul>
@@ -70,4 +71,5 @@
     <li>Decided to make Deck a Singleton instance for use in the User and Dealer classes to ensure a common pool of cards</li>
     <li>Fixed getting integer input from user to stop program crashes</li>
     <li>Changed for in loop to for loop in actionMenu method to loop through all user spreads including those added while iterating</li>
+    <li>Fixed bug where user could bet more than was in their bank</li>
 </ul>
