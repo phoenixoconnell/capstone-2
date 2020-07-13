@@ -63,9 +63,8 @@
     <li>Added feature to show users hand when busted</li>
     <li>Had helpers test/play the game to look for additional issues</li>
     <li>Added rules to Game-Instructions.md</li>
-    <li>Created website for rules</li>
+    <li>Created and hosted website for rules: https://musing-sinoussi-39cb3d.netlify.app/</li>
     <li>Prepared for class presentation</li>
-    <li>Presented project to class</li>
 </ul>
 <h2>
     4. Reflection / Refactor
