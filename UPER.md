@@ -50,20 +50,26 @@
     <li>Implemented functionality for Dealer class</li>
     <li>Changed Deck class so that filling and refilling the deck occur automatically</li>
     <li>Added newRound method to User class</li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Implemented functionality for Menu class</li>
+    <li>Added method to User and Dealer that checks for BlackJack status</li>
+    <li>Began testing and bug fixing</li>
+    <li>Fixed getting integer input from user to stop program crashes</li>
+    <li>Fixed toLowerCase on name entry</li>
+    <li>Changed for in loop to for loop in actionMenu method to loop through all user spreads including those added while iterating</li>
+    <li>Fixed calculation error for doubling bet (*= operator causing unexpected results)</li>
+    <li>Fixed bug where user could bet more than was in their bank</li>
+    <li>Prepared for class presentation</li>
+    <li>Presented project to class</li>
 </ul>
 <h2>
     4. Reflection / Refactor
 </h2>
 <ul>
     <li>Possibility of moving card values out of Cards and implementing more robust logic in Spread to calculate value</li>
+    <li>Would have liked to have included more graphically intense ascii art for cards</li>
     <li>Determined that Hand class was not needed</li>
     <li>Decided to make Deck a Singleton instance for use in the User and Dealer classes to ensure a common pool of cards</li>
-    <li></li>
-    <li></li>
+    <li>Fixed getting integer input from user to stop program crashes</li>
+    <li>Changed for in loop to for loop in actionMenu method to loop through all user spreads including those added while iterating</li>
+    <li>Fixed bug where user could bet more than was in their bank</li>
 </ul>

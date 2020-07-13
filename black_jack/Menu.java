@@ -13,7 +13,7 @@ public class Menu {
 
     public void welcomeMenu() {
         String[] items = {
-                "Welcome to Black Jack Simulator!",
+                "Welcome to Phoenix Black Jack!",
                 "Please start by entering your name below:"
         };
 
@@ -50,6 +50,12 @@ public class Menu {
 
         prompt(items);
         bet = getAmount();
+        while(this.user.getBank() < bet || bet == 0) {
+            if(bet == 0) System.out.println("Bet cannot be $0!");
+            else System.out.println("Not enough money!  Please lower your bet:");
+            bet = getAmount();
+        }
+
         getSelection();
 
         this.user.newRound(bet);
@@ -96,7 +102,7 @@ public class Menu {
             //hasn't decided to stand on it
             while(!s.isStanding() && !s.isBusted()) {
                 prompt("Dealer hand: " + this.dealer.getSpread().toString());
-                prompt("Current action: " + s.toString());
+                prompt("Your hand: " + s.toString());
                 prompt(items);
                 //only display double and split if it's the begging of the action for the spread
                 if(s.getSpread().size() == 2) {
@@ -175,7 +181,7 @@ public class Menu {
         //if one doesn't, it looses
         for(Spread s: this.user.getSpread()) {
             prompt("Dealer hand: " + this.dealer.getSpread().toString());
-            prompt("Current action: " + s.toString());
+            prompt("Your hand: " + s.toString());
             if(s.getValue() >= this.dealer.getSpread().getValue() && !s.isBusted() ) {
                 System.out.println("You win!");
                 user.win(s);
