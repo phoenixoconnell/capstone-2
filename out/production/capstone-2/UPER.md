@@ -59,12 +59,11 @@
     <li>Fixed calculation error for doubling bet (*= operator causing unexpected results)</li>
     <li>Fixed bug where user could bet more than was in their bank</li>
     <li>Fixed bug of busted not showing when player busts their hand</li>
-    <li>Fixed bug of split not playing through both spreads</li>
-    <li>Added feature to show users hand when busted</li>
     <li>Had helpers test/play the game to look for additional issues</li>
     <li>Added rules to Game-Instructions.md</li>
-    <li>Created and hosted website for rules: https://musing-sinoussi-39cb3d.netlify.app/</li>
+    <li>Created website for rules</li>
     <li>Prepared for class presentation</li>
+    <li>Presented project to class</li>
 </ul>
 <h2>
     4. Reflection / Refactor
